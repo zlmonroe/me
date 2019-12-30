@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Zachary L. Monroe-->
+        <meta charset="UTF-8">
+        <title>zlmonroe | Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <!--[if	lt	IE	9]>
+        <script	src="html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>zlmonroe</h1>
+                <h2>Zachary Lynn Monroe</h2>
+            </header>
+
+            <nav>
+                <a href="javascript:void(0);" id="icon" style="font-size:15px;" onclick="show()">&#9776;</a>
+                <ul id="navUl">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="http://zlmonroe.mynetgear.com:8080/Resources/">Resources</a></li>
+                </ul>
+            </nav>
+
+            <main id="whatAmIUpTo" class="centerContent">
+                    <section class="pageInformation">
+                        <h2>What am I up to?</h2>
+                        <p>
+                            My name is Zach Monroe. I am a student, a researcher, an explorer, a photographer, and much more.
+                            I've had the opportunity to work on a lot of cool projects. If you're curious, take a look at what
+                            I've been up to below!
+                        </p>
+                        <ul>
+                            <li><a href="#clide">Common Lisp IDE</a></li>
+                            <li><a href="#jChess">Java Chess (JChess)</a></li>
+                            <li><a href="#chess">C++ Chess</a></li>
+                            <li><a href="#morpheus">Morpheus Python/Java IDE</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="project" id="clide">
+                        <h3>Common Lisp Interactive Development Environment (CLIDE)</h3>
+                        <h4>May 2017 - Present</h4>
+                        <p>Common lisp environment developed in python3 (made to be similar in feel to the jetbrains suite rather than emacs)</p>
+                        <img src="Images/Projects/CLIDE-Thumbnail.png" alt="CLIDE Thumbnail" class="projectImage" onclick="document.getElementById('projectCLIDE').style.display='block'">
+                        <div id="projectCLIDE" class="modal">
+                            <span onclick="document.getElementById('projectCLIDE').style.display='none'">&#10006;</span>
+                            <img src="Images/Projects/CLIDE.png" alt="CLIDE">
+                        </div>
+                    </section>
+
+                    <section class="project" id="jChess">
+                        <h3>Java based Chess</h3>
+                        <h4>January 2017 - May 2017</h4>
+                        <p>JChess is a Java based two player chess program. Our team (Vatricia Edgar, Jonathan Bush, and Timothy Cuprak) was in charge
+                        of debugging an extremely buggy code with almost no documentation. We based our development heavily on a test driven development
+                        style using unit testing and integration testing with both mockito and JUnit. It is a client server based program and the server
+                        is multi-threaded to handle multiple pairs of clients.</p>
+                        <img src="Images/Projects/JChessThumbnail.png" alt="JChess Thumbnail" class="projectImage" onclick="document.getElementById('projectJChess').style.display='block'">
+                        <div id="projectJChess" class="modal">
+                            <span onclick="document.getElementById('projectJChess').style.display='none'">&#10006;</span>
+                            <img src="Images/Projects/JChess.png" alt="JChess">
+                        </div>
+                    </section>
+
+                    <section class="project" id="chess">
+                        <h3>C++ uint64_t based Bitboard Chess</h3>
+                        <h4>November 2016 - December 2016</h4>
+                        <p>Designed an efficient implementation (each turn is O(1) except checkmate and check which are O(n)) of 2 player chess.</p>
+                        <img src="Images/Projects/ChessThumbnail.png" alt="Chess Thumbnail" class="projectImage" onclick="document.getElementById('projectChess').style.display='block'">
+                        <div id="projectChess" class="modal">
+                            <span onclick="document.getElementById('projectChess').style.display='none'">&#10006;</span>
+                            <img src="Images/Projects/Chess.png" alt="Chess">
+                        </div>
+                    </section>
+
+                    <section class="project" id="morpheus">
+                        <h3>Python 3.5 / tkinter IDE "Morpheus"</h3>
+                        <h4>November 2015 - August 2016</h4>
+                        <p>An early attempt at creating a python3 IDE I did my first year of college. It was both the inspiration and the starting
+                        point for my later lisp IDE (CLIDE). This IDE was designed so that I could code both Java and Python in the same Environment
+                        (At the time I was constantly switching between IDLE (python) and Eclipse (Java) having yet to discover the wonder of the
+                        Jetbrains suite. I based it off IDLE but incorporated fixes to grievances (i.e. added multiple tab capabilities)</p>
+                        <img src="Images/Projects/MorpheusThumbnail.png" alt="Morpheus Thumbnail" class="projectImage" onclick="document.getElementById('projectMorpheus').style.display='block'">
+                        <div id="projectMorpheus" class="modal">
+                            <span onclick="document.getElementById('projectMorpheus').style.display='none'">&#10006;</span>
+                            <img src="Images/Projects/Morpheus.png" alt="Morpheus">
+                        </div>
+                    </section>
+            </main>
+
+            <footer>
+                <p>Copyright &copy; 2017 Zachary L. Monroe<br>
+                <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
+                Last Updated: November 9th, 2017<br>
+                The information contained on this website is for educational purposes only<br>
+                All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and Github images
+                provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
+                    <a href="https://github.com/logos">Github's Resource Page</a></p>
+                <div id="socialMedia">
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png" alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                </div>
+            </footer>
+
+            <script>
+            function show() {
+                var navUl = document.getElementById("navUl");
+                if(navUl.style.display === 'none') {
+                    navUl.style.display = "block";
+                    console.log("display set for element");
+                }
+                else {
+                    navUl.style.display = "none";
+                    console.log("hid element ");
+                }
+            }
+            </script>
+        </div>
+    </body>
+</html>

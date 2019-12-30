@@ -1,0 +1,460 @@
+/*
+ * Zachary L. Monroe
+ */
+
+
+/**************************************
+ *       Full page applications
+ **************************************/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ * The following html selector and the two lines at the
+ * end of body were added for IE support of background
+ * image on #wrapper. IE has a known glitch that causes
+ * fixed background images to bounce around when scrolled.
+ * This fixes it by preventing scrolling events in the browser
+ * Solution provided by:
+ * https://stackoverflow.com/questions/19377810/ie-10-11-make-fixed-backgrounds-jump-when-scrolling-with-mouse-wheel
+ *
+ * TODO: Remove this later for mobile using a media query since it slows scrolling on mobile
+*/
+html{
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    /* Fallbacks for browser support */
+    background: #989694;/*Absolute fall back*/
+    background: -webkit-linear-gradient(90deg, #808080 10%, #606060 90%);/*Webkit fallback*/
+    background: -moz-linear-gradient(90deg, #808080 10%, #606060 90%);/*Mozilla specific fallback*/
+    background: linear-gradient(90deg, #808080 10%, #606060 90%);/*Preferred tag*/
+
+    font-family: Verdana, Arial, "Lucida Console", sans-serif;
+
+    /*
+     * Added for IE support of background image on #wrapper
+     */
+    overflow: auto;
+    height: 100%;
+}
+
+a {
+    text-decoration: underline;
+    /* Forces links to match parent's color */
+    color: inherit;
+}
+/**************************************
+ *        Legacy Browser Support
+ **************************************/
+header, nav, main, footer {
+    display: block;
+}
+
+/**************************************
+ *            Header Selectors
+ **************************************/
+header {
+    background-color: black;
+    height: 125px;
+}
+
+header h1, header h2 {
+    /*
+     * Fallbacks for browser support
+     * IE and Opera do  not support text clipping
+    */
+    color: #808080; /*Absolute fallback*/
+    -webkit-text-fill-color: transparent; /*Fallback for gradient*/
+    background: -webkit-linear-gradient(transparent, transparent), url("Images/brushedMetal.jpg"); /*IE fallback*/
+    background: -o-linear-gradient(transparent, transparent); /*Opera fallback for webkit failure on older opera*/
+    -webkit-background-clip: text; /*Not supported by Opera and IE*/
+
+    font-family: "DialogInput", "Verdana", "Arial", sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+header img {
+    width: auto;
+    height: 100px;
+    /*position absolute relative to parent to avoid effect on align center in h1 and h2 tags*/
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+header h1, header h2 {
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+/**************************************
+ *            NavBar Selectors
+ **************************************/
+nav {
+    /* Fallback for browser support*/
+    background: #000000; /*Absolute fallback*/
+    background:-webkit-linear-gradient(#000000 80%, transparent); /*webkit fallback*/
+    background: linear-gradient(#000000 80%, transparent); /*Preferred*/
+
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+nav li {
+    /* list style redundant since display: list-item removed */
+    display: inline-block;
+    width: 25%;
+    height: 40px;
+    margin-right: 1%;
+}
+
+nav a {
+    background-image: url("Images/brushedMetal.jpg");
+    color: #323232;
+
+    /* removes underline from a selector*/
+    text-decoration: none;
+
+    height: 24px;
+
+    font-size: 20px;
+    display: block;
+    padding: 10px 0;
+
+    box-shadow: 0 0 1em white;
+    border: #ffffff solid 2px;
+    transition: box-shadow .5s, border .5s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #0066cc;
+    box-shadow: 0 0 3em #0080ff;
+    border:  #0066cc solid 2px;
+
+    text-shadow: hsla(210,100%,20%,.3) 0 -1px 0,
+    #b3d9ff 0 2px 1px, #99ddff 0 0 5px, hsla(210,100%,50%,.6) 0 0 20px;
+}
+
+/**************************************
+ *            Footer Selectors
+ **************************************/
+footer {
+    /* Fallback for browser support*/
+    background: #000000;
+    background: linear-gradient(transparent, #000000 20%);
+
+    color: white;
+    font-size: 10px;
+    font-style: italic;
+    padding: 50px 20px 20px;
+
+    /* Gets rid of centering from earlier selector */
+    text-align: left;
+}
+
+footer p {
+    display: inline-block;
+    width: 500px;
+    margin: 0 100px;
+}
+
+/**************************************
+ *            Class Selectors
+ **************************************/
+.centerContent {
+    text-align: center;
+    margin: 10vh auto;
+    width: 60%;
+
+    /*Fallback for browser support*/
+    background-color: #f5f5f5; /*Alpha not supported in some browsers*/
+    background-color: rgba(255, 255, 255, .7);
+
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.centerContent * {
+    /*Fallback for browser support*/
+    color: #454545;
+    color: rgba(0, 0, 0, .7);/*Alpha not supported in some browsers*/
+
+    font-size: 20px;
+}
+
+.centerContent section {
+    border-bottom: solid gray;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.centerContent section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.centerContent h2 {
+    margin: 0 20px 20px;
+    font-size: 40px;
+}
+
+.centerContent p {
+    text-align: left;
+    font-size: 15px;
+}
+
+.centerContent li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.centerContent form input,
+.centerContent form textarea,
+.centerContent form select,
+.centerContent form div.radioButtons {
+    font-family: "Times New Roman", Times, "Arial", serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: 0;
+    color: #505050;
+    padding: 10px;
+    width: 95%;
+    background: #d8e2e3;
+    margin-bottom: 30px;
+}
+
+.centerContent form *:focus {
+    box-shadow: 0 0 1em #0080ff;
+}
+
+.centerContent form {
+    /* Overrides center align from before */
+    text-align: left;
+}
+
+.centerContent form p {
+    margin-bottom: 10px;
+}
+
+.centerContent form input[type="submit"],
+.centerContent form input[type="reset"] {
+    width: 40%;
+
+    background-image: url("Images/brushedMetal.jpg");
+    color: #323232;
+
+    font-size: 20px;
+    padding: 10px;
+
+    box-shadow: 0 0 1em white;
+    border: #ffffff solid 2px;
+    transition: box-shadow .5s, border .5s;
+}
+
+.centerContent form input[type="submit"]:hover,
+.centerContent form input[type="reset"]:hover,
+.centerContent form input[type="submit"]:focus,
+.centerContent form input[type="reset"]:focus {
+    color: #0066cc;
+    box-shadow: 0 0 3em #0080ff;
+    border:  #0066cc solid 2px;
+
+    text-shadow: hsla(210,100%,20%,.3) 0 -1px 0,
+    #b3d9ff 0 2px 1px, #99ddff 0 0 5px, hsla(210,100%,50%,.6) 0 0 20px;
+}
+
+.centerContent form input[type="submit"] {
+    margin-left: 4%;
+    margin-right: 10%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 75vw;
+    height: 75vh;
+    padding-top: 5vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal span {
+    display: block;
+    position:absolute;
+    right:0;
+    top:0;
+    cursor: pointer;
+}
+
+.modal span:hover {
+    color: white;
+}
+
+.modal img {
+    width: 70vw;
+    height: auto;
+}
+
+.project p {
+    text-align: left;
+}
+
+.projectImage {
+    width: 300px;
+    height: auto;
+}
+
+.radioButtons {
+    display: block;
+    margin-top: 5px;
+}
+
+.radioButtons * {
+    display: inline;
+}
+
+p.radioButtons {
+    /*Match p to headings*/
+    font-size: 20px;
+    font-family: Verdana, Arial, "Lucida Console", sans-serif;
+}
+
+.radioButtons label {
+    font-size: 13px;
+}
+
+.radioButtons input[type="radio"] {
+    width: 20px;
+    margin: 0px;
+}
+
+/**************************************
+ *              ID Selectors
+ **************************************/
+#whoAmI img, #whoAmI p{
+    float: left;
+    width: 48%;
+}
+
+#whoAmI p {
+    margin-left: 4%;
+}
+
+#socialMedia {
+    display: inline-block;
+    width: 101px;
+    margin: 20px 0;
+}
+
+#socialMedia a {
+    margin: 5px;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+
+    /*White background used as fallback*/
+    background: white url(Images/sandals.jpg) fixed center;
+    /*Fallback for browser support*/
+    -webkit-background-size: cover;/*webkit*/
+    -moz-background-size: cover;/*Mozilla*/
+    -o-background-size: cover;/*Opera*/
+    background-size: cover;/*Preferred*/
+
+    z-index: -1;
+}
+
+#icon {
+    display: none;
+}
+
+
+/**************************************
+ *              Media Queries
+ **************************************/
+@media screen and (max-width: 960px) {
+    #wrapper {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #whoAmI img {
+        width: 50%;
+        margin: 0 20px;
+    }
+
+    #whoAmI p {
+        float: none;
+        font-size: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    footer p {
+        margin-right: 10px;
+    }
+
+    #icon {
+        display: inline-block;
+        width: 80vw;
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        height: 48px;
+        margin-bottom: 5px;
+        width: 80vw;
+    }
+
+    nav ul li a {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    footer p {
+        width: 80vw;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #whoAmI img {
+        width: 70%;
+        float: none;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+}

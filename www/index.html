@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Zachary L. Monroe-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>zlmonroe</title>
+        <link rel="stylesheet" href="style.css">
+        <!--[if	lt	IE	9]>
+        <script	src="html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>zlmonroe</h1>
+                <h2>Zachary Lynn Monroe</h2>
+            </header>
+
+            <nav>
+                <a href="javascript:void(0);" id="icon" style="font-size:15px;" onclick="show()">&#9776;</a>
+                <ul id="navUl">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="./Recipes">Recipes</a></li>
+                </ul>
+            </nav>
+
+            <main id="whoAmI" class="centerContent">
+                <section class="pageInformation">
+                    <h2>Who am I?</h2>
+                    <img src="Images/Monroe-Zachary.jpg" alt="Zachary Monroe">
+                    <p id="test">
+                        My name is Zach Monroe. I am a student, a researcher, an explorer, a photographer, and much more.
+                        I am studying at Arizona State University and pursuing a Bachelor's of Science in Software Engineering
+                        with a primary focus in Web Development and a secondary focus in Machine Learning. Currently I am
+                        researching the applications of Machine Learning towards cryptography and password security. In my
+                        spare time, I love to hike and camp; I'm always looking for new places to explore. I also love to
+                        photograph my experiences to share with the world. This is my portfolio where I hope to share the
+                        experiences I've had with the world!
+                    </p>
+                </section>
+            </main>
+
+            <footer>
+                <p>Copyright &copy; 2017 Zachary L. Monroe<br>
+                <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
+                Last Updated: November 9th, 2017<br>
+                The information contained on this website is for educational purposes only<br>
+                All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and Github images
+                provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
+                    <a href="https://github.com/logos">Github's Resource Page</a></p>
+                <div id="socialMedia">
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png" alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                </div>
+            </footer>
+
+            <script>
+            function show() {
+                var navUl = document.getElementById("navUl");
+                if(navUl.style.display === 'none') {
+                    navUl.style.display = "block";
+                    console.log("display set for element");
+                }
+                else {
+                    navUl.style.display = "none";
+                    console.log("hid element ");
+                }
+            }
+            </script>
+        </div>
+    </body>
+</html>
