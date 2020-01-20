@@ -37,6 +37,7 @@
                         I've been up to below!
                     </p>
                     <ul>
+                        <li><a href="#kitsune">Kitsune - Master's Thesis</a></li>
                         <li><a href="#intern">Microsoft Intern Project</a></li>
                         <li><a href="#decompy">DecomPy</a></li>
                         <li><a href="#clide">Common Lisp IDE</a></li>
@@ -44,6 +45,23 @@
                         <li><a href="#chess">C++ Chess</a></li>
                         <li><a href="#morpheus">Morpheus Python/Java IDE</a></li>
                     </ul>
+                </section>
+
+                <section class="project" id="kitsune">
+                    <h3>Kitsune - Master's Thesis</h3>
+                    <h4>August 2019 - Present</h4>
+                    <p>I have been working with professor Ajay Bansal for my Master's Thesis on creating a tool to
+                    analyze source code and detect plagiarism. The goal is to create a generic, easily extensible
+                    tool which can analyze student submission files and detect plagiarism (similar to tools like
+                    <a href="https://theory.stanford.edu/~aiken/moss/">MOSS</a>). Furthermore, the tool should be
+                    able to understand the semantics of the language (through its grammar) and use this to make
+                    more intelligent comparisons.</p>
+                    <img src="Images/Projects/Kitsune-Thumbnail.png" alt="Kitsune Thumbnail" class="projectImage"
+                         onclick="document.getElementById('projectKitsune').style.display='block'">
+                    <div id="projectKitsune" class="modal">
+                        <span onclick="document.getElementById('projectKitsune').style.display='none'">&#10006;</span>
+                        <img src="Images/Projects/Kitsune.png" alt="Kitsune">
+                    </div>
                 </section>
 
                 <section class="project" id="intern">
@@ -85,7 +103,7 @@
 
                 <section class="project" id="clide">
                     <h3>Common Lisp Interactive Development Environment (CLIDE)</h3>
-                    <h4>May 2017 - Present</h4>
+                    <h4>May 2017 - February 2018</h4>
                     <p>Common lisp environment developed in python3 (made to be similar in feel to the jetbrains suite
                         rather than emacs)</p>
                     <img src="Images/Projects/CLIDE-Thumbnail.png" alt="CLIDE Thumbnail" class="projectImage"
