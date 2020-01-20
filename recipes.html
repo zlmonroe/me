@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Zachary L. Monroe-->
+        <meta charset="UTF-8">
+        <title>zlmonroe | Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <!--[if	lt	IE	9]>
+        <script src="html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>zlmonroe</h1>
+                <h2>Zachary Lynn Monroe</h2>
+            </header>
+
+            <nav>
+                <a href="javascript:void(0);" id="icon" style="font-size:15px;" onclick="show()">&#9776;</a>
+                <ul id="navUl">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                </ul>
+            </nav>
+
+            <main id="recipesPage" class="centerContent">
+                <section class="pageInformation">
+                    <h2>What do I like to cook/eat?</h2>
+                    <p>
+                        My name is Zach Monroe. I am a programmer, a student, a chef, an explorer, a photographer, and
+                        much more.
+                        If you want to try some of the recipes I love, take a look!
+                    </p>
+                </section>
+                <label>
+                    Search
+                    <input type="search" id="search">
+                </label>
+                <ul id="recipes">
+
+                </ul>
+
+            </main>
+
+            <footer>
+                <p>Copyright &copy; 2017 Zachary L. Monroe<br>
+                    <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
+                    Last Updated: November 9th, 2017<br>
+                    The information contained on this website is for educational purposes only<br>
+                    All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and
+                    Github images
+                    provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
+                    <a href="https://github.com/logos">Github's Resource Page</a></p>
+                <div id="socialMedia">
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png"
+                                                               alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img
+                            src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                </div>
+            </footer>
+
+            <script>
+                function show() {
+                    var navUl = document.getElementById("navUl");
+                    if (navUl.style.display === 'none') {
+                        navUl.style.display = "block";
+                        console.log("display set for element");
+                    } else {
+                        navUl.style.display = "none";
+                        console.log("hid element ");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
+<script>
+    function show() {
+        const search = document.getElementById("search");
+        let fileList = ["Asian_Barbecue_Chicken.txt", "Au_Jus.txt", "Balsamic_Glazed_Lamb_Chops.JPG", "Balsamic_Glazed_Lamb_Chops.txt", "Banana_Bread.jpg", "Banana_Bread.txt", "Beef_And_Mushroom_Kabobs.jpg", "Beef_And_Mushroom_Kabobs.txt", "Blackberry_Pie.txt", "Chicken_Souvlakia.txt", "Chili_Chicken_And_Pasta.txt", "Chimichurri_Sauce.txt", "Corn_Bread.txt", "Country_Potatoes_Au_Gratin.jpg", "Country_Potatoes_Au_Gratin.txt", "Crispy_Orange_Glazed_Salmon.txt", "Crockpot_Chipotle_Adobo_Beef.txt", "Crunchy_Cabbage_Salad.JPG", "Crunchy_Cabbage_Salad.txt", "Fried_Rice.txt", "Fruit_Danish.txt", "Garbonzo_Bean_Chocolate_Cake.JPG", "Garbonzo_Bean_Chocolate_Cake.txt", "Honey_Lime_Drumsticks.jpg", "Honey_Lime_Drumsticks.txt", "Lemon_Bars.JPG", "Lemon_Bars.txt", "Oatmeal_Cookies.txt", "Poppy_Seed_Salad_Dressing.JPG", "Poppy_Seed_Salad_Dressing.txt", "RecipeBook.docx", "Sichuan-Style_Stir-Fried_Chicken.JPG", "Teriyaki_Sauce.txt", "Thousand_Island_Dressing.txt", "Tortilla_Soup.JPG", "Tortilla_Soup.txt", "Tzatziki_Sauce.txt"];
+        fileList = fileList.filter((file) => {return file.includes(search.value)});
+        const recipes = document.getElementById("recipes");
+        recipes.innerHTML = "";
+        for (let recipe of fileList) {
+            const name = recipe.split(".")[0];
+            const ext = recipe.split(".")[1];
+            const elem = document.createElement("li");
+            if(ext === "JPG") {
+                elem.innerHTML = `<img src="./Recipes/${recipe}" alt="${name}" height="200" width="200">`
+            }
+            else {
+                elem.innerHTML = `<a href='./${recipe}'>${name.replace("_", " ")}</a>`;
+            }
+            recipes.appendChild(elem)
+        }
+    }
+    show();
+    document.getElementById("search").addEventListener("change", show)
+</script>

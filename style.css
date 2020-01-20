@@ -28,11 +28,15 @@ html{
 }
 
 body {
-    /* Fallbacks for browser support */
-    background: #989694;/*Absolute fall back*/
-    background: -webkit-linear-gradient(90deg, #808080 10%, #606060 90%);/*Webkit fallback*/
-    background: -moz-linear-gradient(90deg, #808080 10%, #606060 90%);/*Mozilla specific fallback*/
-    background: linear-gradient(90deg, #808080 10%, #606060 90%);/*Preferred tag*/
+    /*White background used as fallback*/
+    background: white url(Images/sandals.jpg) fixed center;
+    /*Fallback for browser support*/
+    -webkit-background-size: cover;/*webkit*/
+    -moz-background-size: cover;/*Mozilla*/
+    -o-background-size: cover;/*Opera*/
+    background-size: cover;/*Preferred*/
+
+    z-index: -1;
 
     font-family: Verdana, Arial, "Lucida Console", sans-serif;
 
@@ -114,6 +118,7 @@ nav {
 
     padding-bottom: 30px;
     text-align: center;
+    height: 70px;
 }
 
 nav li {
@@ -297,6 +302,7 @@ footer p {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,.7);
 }
 
 .modal span {
@@ -305,6 +311,8 @@ footer p {
     right:0;
     top:0;
     cursor: pointer;
+    margin: 8px;
+    color: gray;
 }
 
 .modal span:hover {
@@ -312,8 +320,9 @@ footer p {
 }
 
 .modal img {
-    width: 70vw;
     height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .project p {
@@ -372,18 +381,9 @@ p.radioButtons {
 }
 
 #wrapper {
+    background-color: rgba(0, 0, 0, 0.25);
     width: 960px;
     margin: 0 auto;
-
-    /*White background used as fallback*/
-    background: white url(Images/sandals.jpg) fixed center;
-    /*Fallback for browser support*/
-    -webkit-background-size: cover;/*webkit*/
-    -moz-background-size: cover;/*Mozilla*/
-    -o-background-size: cover;/*Opera*/
-    background-size: cover;/*Preferred*/
-
-    z-index: -1;
 }
 
 #icon {
