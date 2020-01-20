@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,7 +38,7 @@
                 <label>
                     Search
                     <input type="search" id="search">
-                </label>
+                </label>`
                 <ul id="recipes">
 
                 </ul>
@@ -50,12 +49,15 @@
                 <p>Copyright &copy; 2017-2020 Zachary L. Monroe<br>
                     <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
                     Last Updated: January 19th, 2020<br>
-                    All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and Github images
+                    All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and
+                    Github images
                     provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
                     <a href="https://github.com/logos">Github's Resource Page</a></p>
                 <div id="socialMedia">
-                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png" alt="Github logo"></a>
-                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png"
+                                                               alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img
+                            src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
                 </div>
             </footer>
 
@@ -77,23 +79,25 @@
 <script>
     function show() {
         const search = document.getElementById("search");
-        let fileList = ["Asian_Barbecue_Chicken.txt", "Au_Jus.txt", "Balsamic_Glazed_Lamb_Chops.JPG", "Balsamic_Glazed_Lamb_Chops.txt", "Banana_Bread.jpg", "Banana_Bread.txt", "Beef_And_Mushroom_Kabobs.jpg", "Beef_And_Mushroom_Kabobs.txt", "Blackberry_Pie.txt", "Chicken_Souvlakia.txt", "Chili_Chicken_And_Pasta.txt", "Chimichurri_Sauce.txt", "Corn_Bread.txt", "Country_Potatoes_Au_Gratin.jpg", "Country_Potatoes_Au_Gratin.txt", "Crispy_Orange_Glazed_Salmon.txt", "Crockpot_Chipotle_Adobo_Beef.txt", "Crunchy_Cabbage_Salad.JPG", "Crunchy_Cabbage_Salad.txt", "Fried_Rice.txt", "Fruit_Danish.txt", "Garbonzo_Bean_Chocolate_Cake.JPG", "Garbonzo_Bean_Chocolate_Cake.txt", "Honey_Lime_Drumsticks.jpg", "Honey_Lime_Drumsticks.txt", "Lemon_Bars.JPG", "Lemon_Bars.txt", "Oatmeal_Cookies.txt", "Poppy_Seed_Salad_Dressing.JPG", "Poppy_Seed_Salad_Dressing.txt", "RecipeBook.docx", "Sichuan-Style_Stir-Fried_Chicken.JPG", "Teriyaki_Sauce.txt", "Thousand_Island_Dressing.txt", "Tortilla_Soup.JPG", "Tortilla_Soup.txt", "Tzatziki_Sauce.txt"];
-        fileList = fileList.filter((file) => {return file.includes(search.value)});
+        let fileList = ["Asian_Barbecue_Chicken.txt", "Au_Jus.txt", "Balsamic_Glazed_Lamb_Chops.JPG", "Balsamic_Glazed_Lamb_Chops.txt", "Banana_Bread.jpg", "Banana_Bread.txt", "Beef_And_Mushroom_Kabobs.jpg", "Beef_And_Mushroom_Kabobs.txt", "Blackberry_Pie.txt", "Chicken_Souvlakia.txt", "Chili_Chicken_And_Pasta.txt", "Chimichurri_Sauce.txt", "Corn_Bread.txt", "Country_Potatoes_Au_Gratin.jpg", "Country_Potatoes_Au_Gratin.txt", "Crispy_Orange_Glazed_Salmon.txt", "Crockpot_Chipotle_Adobo_Beef.txt", "Crunchy_Cabbage_Salad.JPG", "Crunchy_Cabbage_Salad.txt", "Fried_Rice.txt", "Fruit_Danish.txt", "Garbonzo_Bean_Chocolate_Cake.JPG", "Garbonzo_Bean_Chocolate_Cake.txt", "Honey_Lime_Drumsticks.jpg", "Honey_Lime_Drumsticks.txt", "Lemon_Bars.JPG", "Lemon_Bars.txt", "Oatmeal_Cookies.txt", "Poppy_Seed_Salad_Dressing.JPG", "Poppy_Seed_Salad_Dressing.txt", "RecipeBook.docx", "Sichuan-Style_Stir-Fried_Chicken.JPG", "Sichuan-Style_Stir-Fried_Chicken.txt", "Teriyaki_Sauce.txt", "Thousand_Island_Dressing.txt", "Tortilla_Soup.JPG", "Tortilla_Soup.txt", "Tzatziki_Sauce.txt"];
+        fileList = fileList.filter((file) => {
+            return file.toLowerCase().includes(search.value.toLowerCase())
+        });
         const recipes = document.getElementById("recipes");
         recipes.innerHTML = "";
         for (let recipe of fileList) {
-            const name = recipe.split(".")[0];
+            const name = recipe.split(".")[0].replace(/_/g, " ");
             const ext = recipe.split(".")[1];
             const elem = document.createElement("li");
-            if(ext === "JPG") {
-                elem.innerHTML = `<img src="./Recipes/${recipe}" alt="${name}" height="200" width="200">`
-            }
-            else {
-                elem.innerHTML = `<a href='./${recipe}'>${name.replace("_", " ")}</a>`;
+            if (ext === "JPG") {
+                elem.innerHTML = `<figure><img src="./Recipes/${recipe}" alt="${name}" height="200" width="200"><figcaption>${name}</figcaption></figure>`
+            } else {
+                elem.innerHTML = `<a href='./Recipes/${recipe}'>${name}</a>`;
             }
             recipes.appendChild(elem)
         }
     }
+
     show();
     document.getElementById("search").addEventListener("change", show)
 </script>

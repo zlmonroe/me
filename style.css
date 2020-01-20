@@ -142,9 +142,10 @@ nav a {
     display: block;
     padding: 10px 0;
 
-    box-shadow: 0 0 1em white;
-    border: #ffffff solid 2px;
+    box-shadow: rgb(24, 26, 27) 0 0 1em;
     transition: box-shadow .5s, border .5s;
+
+    border: 2px solid rgb(51, 51, 51);
 }
 
 nav a:hover,
@@ -189,19 +190,16 @@ footer p {
     width: 60%;
 
     /*Fallback for browser support*/
-    background-color: #f5f5f5; /*Alpha not supported in some browsers*/
-    background-color: rgba(255, 255, 255, .7);
-
+    background-color: rgb(24, 26, 27); /*Alpha not supported in some browsers*/
+    background-color: rgba(24, 26, 27, 0.7);
     border-radius: 4px;
     overflow: hidden;
     padding: 30px;
 }
 
 .centerContent * {
-    /*Fallback for browser support*/
-    color: #454545;
-    color: rgba(0, 0, 0, .7);/*Alpha not supported in some browsers*/
-
+    color: rgba(227, 227, 227, 0.8);
+    margin: 7px;
     font-size: 20px;
 }
 
@@ -232,65 +230,20 @@ footer p {
     list-style: none;
 }
 
-.centerContent form input,
-.centerContent form textarea,
-.centerContent form select,
-.centerContent form div.radioButtons {
+.centerContent input,
+.centerContent textarea {
     font-family: "Times New Roman", Times, "Arial", serif;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     outline: 0;
-    color: #505050;
-    padding: 10px;
-    width: 95%;
-    background: #d8e2e3;
+    padding: 5px;
+    background-color: #181a1b;
     margin-bottom: 30px;
 }
 
-.centerContent form *:focus {
+.centerContent *:focus, .centerContent a:hover {
     box-shadow: 0 0 1em #0080ff;
-}
-
-.centerContent form {
-    /* Overrides center align from before */
-    text-align: left;
-}
-
-.centerContent form p {
-    margin-bottom: 10px;
-}
-
-.centerContent form input[type="submit"],
-.centerContent form input[type="reset"] {
-    width: 40%;
-
-    background-image: url("Images/brushedMetal.jpg");
-    color: #323232;
-
-    font-size: 20px;
-    padding: 10px;
-
-    box-shadow: 0 0 1em white;
-    border: #ffffff solid 2px;
-    transition: box-shadow .5s, border .5s;
-}
-
-.centerContent form input[type="submit"]:hover,
-.centerContent form input[type="reset"]:hover,
-.centerContent form input[type="submit"]:focus,
-.centerContent form input[type="reset"]:focus {
-    color: #0066cc;
-    box-shadow: 0 0 3em #0080ff;
-    border:  #0066cc solid 2px;
-
-    text-shadow: hsla(210,100%,20%,.3) 0 -1px 0,
-    #b3d9ff 0 2px 1px, #99ddff 0 0 5px, hsla(210,100%,50%,.6) 0 0 20px;
-}
-
-.centerContent form input[type="submit"] {
-    margin-left: 4%;
-    margin-right: 10%;
 }
 
 .modal {
@@ -353,17 +306,12 @@ p.radioButtons {
     font-size: 13px;
 }
 
-.radioButtons input[type="radio"] {
-    width: 20px;
-    margin: 0px;
-}
-
 /**************************************
  *              ID Selectors
  **************************************/
 #whoAmI img, #whoAmI p{
     float: left;
-    width: 48%;
+    width: 45%;
 }
 
 #whoAmI p {
@@ -388,6 +336,18 @@ p.radioButtons {
 
 #icon {
     display: none;
+}
+
+ul#recipes {
+    text-align: left;
+}
+
+ul#recipes figure {
+    float: right;
+    clear: both;
+    display: inline-block;
+    width: 200px;
+    overflow-wrap: break-word;
 }
 
 
