@@ -66,12 +66,10 @@
             <script>
                 function show() {
                     var navUl = document.getElementById("navUl");
-                    if (navUl.style.display === 'none') {
+                    if (navUl.style.display === 'none' || navUl.style.display === "") {
                         navUl.style.display = "block";
-                        console.log("display set for element");
                     } else {
                         navUl.style.display = "none";
-                        console.log("hid element ");
                     }
                 }
             </script>
@@ -79,7 +77,7 @@
     </body>
 </html>
 <script>
-    function show() {
+    function filter() {
         const search = document.getElementById("search");
         let fileList = ["Asian_Barbecue_Chicken.txt", "Au_Jus.txt", "Balsamic_Glazed_Lamb_Chops.JPG", "Balsamic_Glazed_Lamb_Chops.txt", "Banana_Bread.JPG", "Banana_Bread.txt", "Beef_And_Mushroom_Kabobs.txt", "Blackberry_Pie.txt", "Chicken_Souvlakia.txt", "Chili_Chicken_And_Pasta.txt", "Chimichurri_Sauce.txt", "Corn_Bread.txt", "Country_Potatoes_Au_Gratin.JPG", "Country_Potatoes_Au_Gratin.txt", "Crispy_Orange_Glazed_Salmon.txt", "Crockpot_Chipotle_Adobo_Beef.txt", "Crunchy_Cabbage_Salad.JPG", "Crunchy_Cabbage_Salad.txt", "Fried_Rice.txt", "Fruit_Danish.txt", "Garbonzo_Bean_Chocolate_Cake.JPG", "Garbonzo_Bean_Chocolate_Cake.txt", "Honey_Lime_Drumsticks.JPG", "Honey_Lime_Drumsticks.txt", "Lemon_Bars.JPG", "Lemon_Bars.txt", "Oatmeal_Cookies.txt", "Poppy_Seed_Salad_Dressing.JPG", "Poppy_Seed_Salad_Dressing.txt", "RecipeBook.docx", "Sichuan-Style_Stir-Fried_Chicken.JPG", "Sichuan-Style_Stir-Fried_Chicken.txt", "Teriyaki_Sauce.txt", "Thousand_Island_Dressing.txt", "Tortilla_Soup.JPG", "Tortilla_Soup.txt", "Tzatziki_Sauce.txt"];
         fileList = fileList.filter((file) => {
@@ -100,6 +98,6 @@
         }
     }
 
-    show();
-    document.getElementById("search").addEventListener("change", show)
+    filter();
+    document.getElementById("search").addEventListener("change", filter)
 </script>

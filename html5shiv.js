@@ -20,19 +20,19 @@
 
   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-d7137690e30123bade38abb082ac79f36cc7a105ff92e602405f53b725465cab.css" integrity="sha256-1xN2kOMBI7reOKuwgqx582zHoQX/kuYCQF9TtyVGXKs=" media="all" rel="stylesheet" />
   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-9ba9be9e8a6c36227b1ec0bf7006f7629a027836eabcff92ccc6a5725c817ace.css" integrity="sha256-m6m+nopsNiJ7HsC/cAb3YpoCeDbqvP+SzMalclyBes4=" media="all" rel="stylesheet" />
-  
-  
-  
-  
+
+
+
+
 
   <meta name="viewport" content="width=device-width">
-  
+
   <title>html5shiv/html5shiv.js at master · aFarkas/html5shiv</title>
   <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
   <meta property="fb:app_id" content="1401488693436528">
 
-    
+
     <meta content="https://avatars1.githubusercontent.com/u/188254?s=400&amp;v=4" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="aFarkas/html5shiv" property="og:title" /><meta content="https://github.com/aFarkas/html5shiv" property="og:url" /><meta content="html5shiv - This script is the defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer." property="og:description" />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
@@ -40,7 +40,7 @@
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
   <meta name="request-id" content="E0AB:3DB2:48689C:6E3F9D:59E0DFB8" data-pjax-transient>
-  
+
 
   <meta name="selected-link" value="repo_source" data-pjax-transient>
 
@@ -57,7 +57,7 @@
   <meta class="js-ga-set" name="dimension1" content="Logged In">
 
 
-  
+
 
       <meta name="hostname" content="github.com">
   <meta name="user-login" content="zlmonroe">
@@ -70,7 +70,7 @@
   <meta name="html-safe-nonce" content="f7f4026048d8c927c4a1b25f4743067feb00a14e">
 
   <meta http-equiv="x-pjax-version" content="805088c9711e954df0e43fc48b6452dc">
-  
+
 
       <link href="https://github.com/aFarkas/html5shiv/commits/master.atom" rel="alternate" title="Recent Commits to html5shiv:master" type="application/atom+xml">
 
@@ -98,19 +98,19 @@
   </head>
 
   <body class="logged-in env-production page-blob">
-    
+
 
   <div class="position-relative js-header-wrapper ">
     <a href="#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
     <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
 
-    
-    
-    
 
 
 
-        
+
+
+
+
 <header class="Header  f5" role="banner">
   <div class="d-flex px-3 flex-justify-between container-lg">
     <div class="d-flex flex-justify-between">
@@ -165,11 +165,11 @@
       </div>
 
       <div class="d-flex">
-        
+
 <ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
   <li class="dropdown js-menu-container js-header-notifications">
     <span class="d-inline-block  px-2">
-      
+
 
     </span>
   </li>
@@ -184,7 +184,7 @@
       </summary>
 
       <ul class="dropdown-menu dropdown-menu-sw">
-        
+
 <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
   New repository
 </a>
@@ -271,7 +271,7 @@
 </header>
 
 
-      
+
 
   </div>
 
@@ -285,7 +285,7 @@
   <div role="main">
         <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
     <div id="js-repo-pjax-container" data-pjax-container>
-      
+
 
 
 
@@ -374,7 +374,7 @@
   </li>
 
   <li>
-    
+
   <div class="js-toggler-container js-social-container starring-container ">
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/aFarkas/html5shiv/unstar" class="starred js-social-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Tjetsl0W9vA+ai09IfPPsRKM+nH3vYXvy7+4rCnaan2EGnxGfUrs6ZE/W77O5Eet0IbZstk7tdkCBtkSjWl3jg==" /></div>
       <input type="hidden" name="context" value="repository"></input>
@@ -437,7 +437,7 @@
 </h1>
 
       </div>
-      
+
 <nav class="reponav js-repo-nav js-sidenav-container-pjax container"
      itemscope
      itemtype="http://schema.org/BreadcrumbList"
@@ -490,16 +490,16 @@
 <div class="container new-discussion-timeline experiment-repo-nav">
   <div class="repository-content">
 
-    
+
   <a href="/aFarkas/html5shiv/blob/a6b1be53e3e49f93d6d218f52bb08f6a6f91bada/src/html5shiv.js" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
   <!-- blob contrib key: blob_contributors:v21:7fa026439d6e60717cc9a7552219b636 -->
 
   <div class="file-navigation js-zeroclipboard-container">
-    
+
 <div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
   <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
+
     type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
       <i>Branch:</i>
       <span class="js-select-button css-truncate-target">master</span>
@@ -586,7 +586,7 @@
             </a>
         </div>
 
-          <div class="select-menu-no-results">Nothing to show</div>
+          <div class="select-menu-no-results">Nothing to filter</div>
       </div>
 
       <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
@@ -745,7 +745,7 @@
             </a>
         </div>
 
-        <div class="select-menu-no-results">Nothing to show</div>
+        <div class="select-menu-no-results">Nothing to filter</div>
       </div>
 
     </div>
@@ -767,7 +767,7 @@
   </div>
 
 
-  
+
   <div class="commit-tease">
       <span class="float-right">
         <a class="commit-tease-sha" href="/aFarkas/html5shiv/commit/48f27bbcdf47c392456fdaf7cc6584a6046f0e3d" data-pjax>
@@ -889,7 +889,7 @@
   </div>
 </div>
 
-    
+
 
   <div itemprop="text" class="blob-wrapper data type-javascript">
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
@@ -2284,7 +2284,7 @@
 
   </div>
 
-      
+
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
@@ -2322,14 +2322,14 @@
   </div>
 
 
-    
+
     <script crossorigin="anonymous" integrity="sha256-B2nQiwimpgbJqLq5UZ3+8Qvx3E0kKVsk+HgfjDgi7eE=" src="https://assets-cdn.github.com/assets/frameworks-0769d08b08a6a606c9a8bab9519dfef10bf1dc4d24295b24f8781f8c3822ede1.js"></script>
-    
+
     <script async="async" crossorigin="anonymous" integrity="sha256-mu/ifkGf0f65rRkFmbNIfxT8R3IqTwI6+AVoABRNuZc=" src="https://assets-cdn.github.com/assets/github-9aefe27e419fd1feb9ad190599b3487f14fc47722a4f023af8056800144db997.js"></script>
-    
-    
-    
-    
+
+
+
+
   <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
     <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
     <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>

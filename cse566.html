@@ -64,13 +64,11 @@
 
             <script>
                 function show() {
-                    var navUl = document.getElementById("navUl");
-                    if (navUl.style.display === 'none') {
+                    let navUl = document.getElementById("navUl");
+                    if (navUl.style.display === 'none' || navUl.style.display === "") {
                         navUl.style.display = "block";
-                        console.log("display set for element");
                     } else {
                         navUl.style.display = "none";
-                        console.log("hid element ");
                     }
                 }
             </script>
@@ -78,7 +76,7 @@
     </body>
 </html>
 <script>
-    function show() {
+    function filter() {
         const search = document.getElementById("search");
         let fileList = ["1.Agile_Software_Development_An_Overview.pdf", "2.Scrum_is_Simple.pdf", "3.Why_Is_Sprint_Zero_a_Critical_Activity.pdf", "4.Hybrid_Software_Development_Approached_In_Practice.pdf", "5.The_Top_10_Adages_In_Continuous_Deployment.pdf", "6.The_DevOps_Phenomenon.pdf", "7.Debunking_Agile_Myths.pdf", "8.Lean_Software_Development_Principles.pdf", "9.Service_Orientation_and_Systems_of_Systems.pdf", "10.Open_Source_and_the_Software_Supply_Chain.pdf", "11.Crowdsourcing_For_Software_Engineering.pdf", "12.SPMN_16_Critical_Software_Practices.pdf", "13.The_Two_Most_Useful_Earned_Value_Metrics_The_CPI_and_the_TCPI.pdf", "14.Earned_Value_Management_(EVM)_for_Agile_Software_Projects.pdf", "15.Are_Management_Basics_Affected_When_Using_Agile_Methods.pdf", "16.Taxonomy_Base_Risk_Identification.pdf", "17.A_Process_For_Managing_Risk_in_Distributed_Teams.pdf", "18.Training_Software_Project_Managers.pdf", "19.Towards_A_Better_Software_Manager.pdf", "20.People_Factors_in_Software_Management.pdf", "21.People-driven_Process-enabled_Software_Development.pdf", "22.Software_Project_Management_Learning_from_Our_Mistakes.pdf", "23.The_Buisiness_of_Software_Estimation_Is_Not_Evil.pdf", "24.Core_Computing_Concepts.pdf", "25.Estimation_Tools_and_Techniques.pdf", "26.Managing_The_Size_Of_Your_Projects_A_PM_Look_at_Function_Points.pdf", "27.Project_Estimation_With_Use_Case_Points.pdf", "28.Function_Points_Use_Case_Points_Story_Points.pdf", "29.SISE_A_Novel_Approach_to_Individual_Effort_Estimation.pdf", "30.Re-Using_Open_Source_Software_in_Your_Software_Delivery.pdf", "31.Scrum_Practices_and_Global_Software_Devlopment.pdf", "32.Improving_Agility_And_Discipline_of_Software_Development_with_the_Scrum_and_CMMI.pdf", "33.Applying_Software_Engineering_Standards_in_Very_Small_Entities.pdf", "34.Hybrid-Agile_Software_Development_Anti-patterns_Risks_and_Recommendations.pdf", "35.Enough_Software_Processes_Let’s_Do_Patterns.pdf", "36.Using_Analytics_to_Guide_Improvement_during_an_Agile–DevOps_Transformation.pdf", "37.Software_Quality_The_Elusive_Target.pdf", "38.Good_Enough_Quality_Beyond_the_Buzzword.pdf", "39.Managing_Technical_Debt.pdf", "40.Large_Scale_Empirical_Study_of_Just-in-Time_Quality_Assurance.pdf", "41.Using_Guidelines_to_Improve_Quality_in_Software_Nonfunctional_Attributes.pdf", "42.Implementing_Functional_Safety.pdf", "43.Safety_Security_Now_Sustainability.pdf", "44.Back_to_the_Basics_Measurement_and_Metrics.pdf", "45.The_3C_Approach_for_Agile_Quality_Assurance.pdf", "46.Effectivity_and_Economical_Aspects_for_Agile_Quality_Assurance_in_Large_Enterprises.pdf", "47.Legal_Liability_for_Bad_Software.pdf", "48.Data_Science_Technologies_for_Better_Software.pdf", "49.A_Retrospective_View_of_the_Laws_of_Software_Engineering.pdf"];
         fileList = fileList.filter((file) => {
@@ -95,6 +93,6 @@
         }
     }
 
-    show();
-    document.getElementById("search").addEventListener("change", show)
+    filter();
+    document.getElementById("search").addEventListener("change", filter)
 </script>

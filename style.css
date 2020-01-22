@@ -116,9 +116,8 @@ nav {
     background:-webkit-linear-gradient(#000000 80%, transparent); /*webkit fallback*/
     background: linear-gradient(#000000 80%, transparent); /*Preferred*/
 
-    padding-bottom: 30px;
+    padding-bottom: 75px;
     text-align: center;
-    height: 70px;
 }
 
 nav li {
@@ -177,8 +176,7 @@ footer {
 
 footer p {
     display: inline-block;
-    width: 500px;
-    margin: 0 100px;
+    width: 70%;
 }
 
 /**************************************
@@ -320,8 +318,8 @@ p.radioButtons {
 
 #socialMedia {
     display: inline-block;
-    width: 101px;
-    margin: 20px 0;
+    width: 100px;
+    float: right;
 }
 
 #socialMedia a {
@@ -453,7 +451,7 @@ ul#files figure {
     }
 
     nav ul {
-        display: none;
+        display: none
     }
 
     nav ul li {
@@ -469,7 +467,7 @@ ul#files figure {
 
 @media screen and (max-width: 775px) {
     footer p {
-        width: 80vw;
+        width: 50%;
         margin: 0;
     }
 }
