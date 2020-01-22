@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Zachary L. Monroe-->
+        <meta charset="UTF-8">
+        <title>zlmonroe | Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <!--[if	lt	IE	9]>
+        <script src="html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>zlmonroe</h1>
+                <h2>Zachary Lynn Monroe</h2>
+            </header>
+
+            <nav>
+                <a href="javascript:void(0);" id="icon" style="font-size:15px;" onclick="show()">&#9776;</a>
+                <ul id="navUl">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="cse566.html">CSE566 Readings</a></li>
+                </ul>
+            </nav>
+
+            <main id="recipesPage" class="centerContent">
+                <section class="pageInformation">
+                    <h2>CSE566</h2>
+                    <p>
+                        I'm taking CSE566 at ASU this semester. These are the required readings for that class.
+                        I have posted them for myself and other students to reference.
+                    </p>
+                </section>
+                <label>
+                    Search
+                    <input type="search" id="search">
+                </label>`
+                <ul id="files">
+
+                </ul>
+
+            </main>
+
+            <footer>
+                <p>Copyright &copy; 2017-2020 Zachary L. Monroe<br>
+                    <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
+                    Last Updated: January 19th, 2020<br>
+                    All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and
+                    Github images
+                    provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
+                    <a href="https://github.com/logos">Github's Resource Page</a></p>
+                <div id="socialMedia">
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png"
+                                                               alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img
+                            src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                </div>
+            </footer>
+
+            <script>
+                function show() {
+                    var navUl = document.getElementById("navUl");
+                    if (navUl.style.display === 'none') {
+                        navUl.style.display = "block";
+                        console.log("display set for element");
+                    } else {
+                        navUl.style.display = "none";
+                        console.log("hid element ");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
+<script>
+    function show() {
+        const search = document.getElementById("search");
+        let fileList = ["1.Agile_Software_Development_An_Overview.pdf","2.Scrum_is_Simple.pdf","3.Why_Is_Sprint_Zero_a_Critical_Activity.pdf","4.Hybrid_Software_Development_Approached_In_Practice.pdf","5.The_Top_10_Adages_In_Continuous_Deployment.pdf","6.The_DevOps_Phenomenon.pdf","7.Debunking_Agile_Myths.pdf","8.Lean_Software_Development_Principles.pdf","9.Service_Orientation_and_Systems_of_Systems.pdf","10.Open_Source_and_the_Software_Supply_Chain.pdf","11.Crowdsourcing_For_Software_Engineering.pdf","12.SPMN_16_Critical_Software_Practices.pdf","13.The_Two_Most_Useful_Earned_Value_Metrics_The_CPI_and_the_TCPI.pdf","14.Earned_Value_Management_(EVM)_for_Agile_Software_Projects.pdf","15.Are_Management_Basics_Affected_When_Using_Agile_Methods.pdf","16.Taxonomy_Base_Risk_Identification.pdf","17.A_Process_For_Managing_Risk_in_Distributed_Teams.pdf","18.Training_Software_Project_Managers.pdf","19.Towards_A_Better_Software_Manager.pdf","20.People_Factors_in_Software_Management.pdf","21.People-driven_Process-enabled_Software_Development.pdf","22.Software_Project_Management_Learning_from_Our_Mistakes.pdf","23.The_Buisiness_of_Software_Estimation_Is_Not_Evil.pdf","24.Core_Computing_Concepts.pdf"];
+        fileList = fileList.filter((file) => {
+            return file.toLowerCase().includes(search.value.toLowerCase())
+        });
+        const files = document.getElementById("files");
+        files.innerHTML = "";
+        for (let file of fileList) {
+            const number = file.split(".")[0];
+            const name = file.split(".")[1].replace(/_/g, " ");
+            const elem = document.createElement("li");
+            elem.innerHTML = `<a href='./CSE566/Readings/${file}'>${number}. ${name}</a>`;
+            files.appendChild(elem)
+        }
+    }
+
+    show();
+    document.getElementById("search").addEventListener("change", show)
+</script>
