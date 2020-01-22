@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Zachary L. Monroe-->
+        <meta charset="UTF-8">
+        <title>zlmonroe | Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <!--[if	lt	IE	9]>
+        <script src="html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>zlmonroe</h1>
+                <h2>Zachary Lynn Monroe</h2>
+            </header>
+
+            <nav>
+                <a href="javascript:void(0);" id="icon" style="font-size:15px;" onclick="show()">&#9776;</a>
+                <ul id="navUl">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="cse566.html">CSE566</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                </ul>
+            </nav>
+
+            <main id="photosPage" class="centerContent">
+                <section class="pageInformation">
+                    <h2>Photography</h2>
+                    <p>
+                        My name is Zach Monroe. I am a programmer, a student, a chef, an explorer, a photographer, and
+                        much more.
+                        I love taking photos of all of the amazing things I see on my adventures!
+                    </p>
+                </section>
+                `
+                <div class="slideshow">
+                    <div class="slide" id="slide-0">
+                        <img src="./Images/Photos/StackedRocks.jpg">
+                    </div>
+                    <div class="slide" id="slide-1">
+                        <img src="./Images/Photos/WhiteMountainsCCC.jpg">
+                    </div>
+                    <div class="slide" id="slide-2">
+                        <img src="./Images/Photos/CarlsbadBeach.jpg">
+                    </div>
+                    <div class="slide" id="slide-3">
+                        <img src="./Images/Photos/RainierFlower.JPG">
+                    </div>
+                    <div class="slide" id="slide-4">
+                        <img src="./Images/Photos/Boggle.jpg">
+                    </div>
+                    <div class="slide" id="slide-5">
+                        <img src="./Images/Photos/Hummingbird.JPG">
+                    </div>
+                    <div class="slide" id="slide-6">
+                        <img src="./Images/Photos/NeighborhoodNight.jpg">
+                    </div>
+                    <div class="slide" id="slide-7">
+                        <img src="./Images/Photos/RainierGlacierLake.JPG">
+                    </div>
+                    <div class="slide" id="slide-8">
+                        <img src="./Images/Photos/sandals.jpg">
+                    </div>
+                    <div class="slide" id="slide-9">
+                        <img src="./Images/Photos/ASU_AMountainNight.jpg">
+                    </div>
+                </div>
+
+            </main>
+
+            <footer>
+                <p>Copyright &copy; 2017-2020 Zachary L. Monroe<br>
+                    <a href="mailto:zlmonroe13@gmail.com">zlmonroe13@gmail.com</a><br>
+                    Last Updated: January 19th, 2020<br>
+                    All images used on this site are owned by Zach Monroe. Unauthorized use is prohibited. Linked-In and
+                    Github images
+                    provided by <a href="https://brand.linkedin.com/downloads">Linked-In's Resource Page</a> and
+                    <a href="https://github.com/logos">Github's Resource Page</a></p>
+                <div id="socialMedia">
+                    <a href="https://github.com/zlmonroe"><img src="Images/GitHub-Mark-Light-32px.png"
+                                                               alt="Github logo"></a>
+                    <a href="https://www.linkedin.com/in/zachary-monroe-61433b138/"><img
+                            src="Images/In-2CRev-34px-TM.png" alt="Linked-in logo"></a>
+                </div>
+            </footer>
+
+            <script>
+                function show() {
+                    var navUl = document.getElementById("navUl");
+                    if (navUl.style.display === 'none') {
+                        navUl.style.display = "block";
+                        console.log("display set for element");
+                    } else {
+                        navUl.style.display = "none";
+                        console.log("hid element ");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
